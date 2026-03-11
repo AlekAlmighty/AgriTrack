@@ -1,0 +1,477 @@
+/* Farm Records */
+.farm-records {
+  animation: fadeIn 0.5s ease;
+}
+
+.records-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding: 20px;
+  border-radius: 12px;
+  background: linear-gradient(to left, #9c27b0, #673ab7);
+  color: white;
+}
+
+.records-header h2 {
+  font-size: 32px;
+  color: white;
+  margin: 0;
+}
+
+.records-header p {
+  color: white;
+}
+
+.records-header p {
+  color: #666;
+  font-size: 16px;
+  margin: 0;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* export button styles removed */
+
+.add-record-btn {
+  background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.add-record-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(27, 94, 32, 0.3);
+}
+
+/* Add Record Form */
+.add-record-form {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  animation: slideIn 0.3s ease;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1b5e20;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #2e7d32;
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(27, 94, 32, 0.3);
+}
+
+.cancel-btn {
+  background: #f0f0f0;
+  color: #666;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.cancel-btn:hover {
+  background: #e0e0e0;
+}
+
+/* Activity Summary */
+.activity-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.activity-type {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.activity-type:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.activity-icon {
+  font-size: 32px;
+}
+
+.activity-info {
+  flex: 1;
+}
+
+.activity-name {
+  font-size: 13px;
+  color: #666;
+  font-weight: 500;
+}
+
+.activity-count {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1b5e20;
+}
+
+/* Records Section */
+.records-section h3 {
+  font-size: 20px;
+  color: #1b5e20;
+  margin-bottom: 20px;
+}
+
+.records-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.record-item {
+  background: white;
+  border-radius: 12px;
+  padding: 18px;
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.record-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.record-icon {
+  font-size: 28px;
+  min-width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.record-content {
+  flex: 1;
+}
+
+.record-content h4 {
+  font-size: 16px;
+  color: #1b5e20;
+  margin-bottom: 8px;
+}
+
+.record-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.record-details span {
+  display: flex;
+}
+
+.price {
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+.record-notes {
+  font-size: 12px;
+  color: #999;
+  margin: 0;
+  font-style: italic;
+}
+
+.record-date {
+  font-size: 13px;
+  color: #999;
+  min-width: 60px;
+  text-align: center;
+}
+
+.record-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-btn,
+.delete-btn {
+  background: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.edit-btn:hover {
+  transform: scale(1.2);
+}
+
+.delete-btn:hover {
+  transform: scale(1.2);
+  filter: hue-rotate(10deg);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .records-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .records-header h2 {
+    font-size: 28px;
+  }
+
+  .activity-summary {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .records-header h2 {
+    font-size: 24px;
+  }
+
+  .add-record-form {
+    padding: 20px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .activity-summary {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .activity-type {
+    padding: 15px;
+  }
+
+  .activity-icon {
+    font-size: 28px;
+  }
+
+  .activity-count {
+    font-size: 20px;
+  }
+
+  .record-item {
+    padding: 15px;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .record-content {
+    order: 1;
+    flex: 1;
+    min-width: 100%;
+  }
+
+  .record-icon {
+    order: 2;
+    min-width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+
+  .record-date {
+    order: 3;
+    min-width: auto;
+  }
+
+  .record-actions {
+    order: 4;
+  }
+
+  .record-details {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .records-header h2 {
+    font-size: 20px;
+  }
+
+  .records-header {
+    margin-bottom: 20px;
+  }
+
+  .add-record-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .add-record-form {
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .form-group label {
+    font-size: 13px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .form-actions {
+    gap: 10px;
+  }
+
+  .submit-btn,
+  .cancel-btn {
+    flex: 1;
+    padding: 10px 15px;
+    font-size: 13px;
+  }
+
+  .activity-summary {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .activity-type {
+    padding: 12px;
+  }
+
+  .activity-icon {
+    font-size: 24px;
+  }
+
+  .activity-name {
+    font-size: 11px;
+  }
+
+  .activity-count {
+    font-size: 18px;
+  }
+
+  .records-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .records-list {
+    gap: 12px;
+  }
+
+  .record-item {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .record-icon {
+    font-size: 20px;
+    min-width: 35px;
+    height: 35px;
+  }
+
+  .record-content h4 {
+    font-size: 14px;
+  }
+
+  .record-details {
+    gap: 8px;
+    font-size: 11px;
+  }
+
+  .record-notes {
+    font-size: 11px;
+  }
+
+  .record-date {
+    font-size: 11px;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,242 @@
+/* Navbar */
+.navbar {
+  background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+  color: white;
+  padding: 12px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.logo-icon {
+  font-size: 28px;
+}
+
+.logo-text h1 {
+  font-size: 22px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.logo-text p {
+  font-size: 12px;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* Navigation Menu */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-link {
+  background: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-link.active {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-bottom: 3px solid white;
+}
+
+.nav-link .icon {
+  font-size: 16px;
+}
+
+/* Navbar Right */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.notification-bell {
+  position: relative;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.notification-dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #ff6b6b;
+  border-radius: 50%;
+  top: 0;
+  right: 0;
+}
+
+.user-profile {
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.user-profile:hover {
+  background-color: rgba(255, 255, 255, 0.35);
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  background: none;
+  padding: 0;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .nav-menu {
+    gap: 8px;
+  }
+
+  .nav-link {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-wrap: wrap;
+  }
+
+  .hamburger {
+    display: flex;
+    order: 2;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+    flex-direction: column;
+    padding: 15px;
+    gap: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-link {
+    padding: 12px 15px;
+    border-radius: 8px;
+    justify-content: flex-start;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: translate(0, 11px) rotate(45deg);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: translate(0, -11px) rotate(-45deg);
+  }
+
+  .navbar-right {
+    gap: 15px;
+  }
+
+  .logo-text h1 {
+    font-size: 18px;
+  }
+
+  .logo-text p {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 12px;
+  }
+
+  .navbar-container {
+    gap: 10px;
+  }
+
+  .navbar-logo {
+    gap: 8px;
+  }
+
+  .logo-icon {
+    font-size: 24px;
+  }
+
+  .logo-text h1 {
+    font-size: 16px;
+  }
+
+  .notification-bell {
+    font-size: 18px;
+  }
+
+  .user-profile {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .nav-menu {
+    padding: 10px;
+  }
+}
