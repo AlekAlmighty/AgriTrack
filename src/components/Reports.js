@@ -468,6 +468,10 @@ function GrowthFactors() {
 function Reports() {
   const [activeTab, setActiveTab] = useState('Crop Growth');
 
+  const handlePrint = () => {
+    window.print();
+  };
+
   return (
     <div className="reports-container">
       {/* Header */}
@@ -476,6 +480,9 @@ function Reports() {
           <h1>Farm Reports & Analytics</h1>
           <p>Comprehensive performance insights</p>
         </div>
+        <button className="print-btn no-print" onClick={handlePrint}>
+          🖨️ Print Report
+        </button>
       </div>
 
       {/* Stats Cards */}
@@ -513,25 +520,25 @@ function Reports() {
       {/* Tab Navigation */}
       <div className="tab-navigation">
         <button
-          className={`tab-btn ${activeTab === 'Crop Growth' ? 'active' : ''}`}
+          className={`tab-btn no-print ${activeTab === 'Crop Growth' ? 'active' : ''}`}
           onClick={() => setActiveTab('Crop Growth')}
         >
           Crop Growth
         </button>
         <button
-          className={`tab-btn ${activeTab === 'Production' ? 'active' : ''}`}
+          className={`tab-btn no-print ${activeTab === 'Production' ? 'active' : ''}`}
           onClick={() => setActiveTab('Production')}
         >
           Production
         </button>
         <button
-          className={`tab-btn ${activeTab === 'Activities' ? 'active' : ''}`}
+          className={`tab-btn no-print ${activeTab === 'Activities' ? 'active' : ''}`}
           onClick={() => setActiveTab('Activities')}
         >
           Activities
         </button>
         <button
-          className={`tab-btn ${activeTab === 'Resources' ? 'active' : ''}`}
+          className={`tab-btn no-print ${activeTab === 'Resources' ? 'active' : ''}`}
           onClick={() => setActiveTab('Resources')}
         >
           Resources

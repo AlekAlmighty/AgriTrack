@@ -32,3 +32,55 @@
     padding: 8px;
   }
 }
+
+.print-btn {
+  background: #ffffff;
+  border: 1px solid #1b5e20;
+  color: #1b5e20;
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.print-btn:hover {
+  background: #e8f5e9;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .farm-records,
+  .reports-container,
+  .farm-records *,
+  .reports-container * {
+    visibility: visible;
+  }
+
+  .farm-records,
+  .reports-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  .no-print,
+  .add-record-form,
+  .tab-navigation,
+  .filter-row,
+  .record-actions,
+  .crop-actions,
+  .secondary-btn,
+  .print-btn {
+    display: none !important;
+  }
+
+  .records-header,
+  .reports-header-section {
+    page-break-after: avoid;
+  }
+}
